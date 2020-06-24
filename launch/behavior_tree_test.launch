@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node name="robot_move_action_server" pkg="behavior_tree_roscpp" type="robot_move_action_server" output="screen"/>
+  <node name="condition_move_action_server" pkg="behavior_tree_roscpp" type="condition_move_action_server" output="screen"/>
+  <node name="robot_stop_action_server" pkg="behavior_tree_roscpp" type="robot_stop_action_server" output="screen"/>
+  <node name="condition_stop_action_server" pkg="behavior_tree_roscpp" type="condition_stop_action_server" output="screen"/>
+  <node name="test_behavior_tree" pkg="behavior_tree_roscpp" type="test_behavior_tree" output="screen">
+    <param name="tree_path" value="$(find behavior_tree_roscpp)/behavior_trees_xml/test_tree.xml"/>
+  </node>
+</launch>
+
+
